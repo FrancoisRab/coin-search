@@ -1,0 +1,8 @@
+<%= simple_form_for(@store) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :postcode %>
+  <%= f.button :submit, class: "btn btn-primary", value: "Valider"  %>
+<% end %>

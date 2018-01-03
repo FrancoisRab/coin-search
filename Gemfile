@@ -5,14 +5,16 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-#Connection
-gem 'google-api-client', :require => 'google/api_client'
-gem 'omniauth'
-gem 'omniauth-google-oauth2'
+# #Connection
+# gem 'google-api-client', :require => 'google/api_client'
+# gem 'omniauth'
+# gem 'omniauth-google-oauth2'
 
 #Search
 gem 'pg_search'
 
+#pundit
+gem "pundit"
 
 #devise
 gem 'devise'
