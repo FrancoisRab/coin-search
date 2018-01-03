@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div id="stores">
+        <% @stores.each do |store| %>
+          <h4><%= store.name %></h4>
+          <p><%= store.category  %> || <%= store.crypto %></p>
+          <p><%= store.address  %> <%= store.postcode %></p>
+          <p><strong>Ouverture </strong>: <%= store.opening_hours %></p>
+          <p><%= store.description %></p>
+          <p><strong>Contact </strong>: <%= store.contact %></p>
+          <p><strong>Site internet </strong> : <%= store.website %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
