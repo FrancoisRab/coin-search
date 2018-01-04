@@ -4,8 +4,38 @@
     <%= image_tag 'logo.png' %>
   </a>
 
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Se connecter</a>
-  </div>
+  <% if user_signed_in? %>
+  <!-- Navbar right -->
+    <div class="connection">
+      <p>
+        <%= link_to 'Accueil', root_path %>
+      </p>
+      <p>
+        <%= link_to 'Commerces', stores_path %>
+      </p>
+      <p>
+        <%= link_to 'Ajouter mon commerce', new_store_path %>
+      </p>
+      <p>
+        <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete %>
+      </p>
+    </div>
+
+  <% else %>
+  <!-- Login link (when logged out) -->
+    <div class="connection">
+      <p>
+        <%= link_to 'Accueil', root_path %>
+      </p>
+      <p>
+        <%= link_to 'Commerces', stores_path %>
+      </p>
+      <p>
+        <%= link_to "Connexion", new_user_session_path %>
+      </p>
+    </div>
+  <% end %>
 </div>
+
+
+
