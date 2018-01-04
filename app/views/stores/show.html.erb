@@ -6,10 +6,10 @@
 <p><%= @store.opening_hours %></p>
 <p><%= @store.crypto %></p>
 <p><%= @store.contact %></p>
-<p><%= @store.website %></p>
+<p><%= link_to @store.website, @store.website, target: "_blank" %></p>
 
 
-<%= link_to 'Accueil', root_path %>
+<%= link_to 'Accueil', root_path %> |
 <% if user_signed_in? %>
   <%= link_to 'Edit', edit_store_path %> |
   <%= link_to "Delete", store_path(@store),

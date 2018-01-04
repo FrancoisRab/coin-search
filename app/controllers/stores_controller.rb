@@ -48,7 +48,11 @@ class StoresController < ApplicationController
                                   :category,
                                   :description,
                                   :address,
-                                  :postcode)
+                                  :postcode,
+                                  :opening_hours,
+                                  :crypto,
+                                  :contact,
+                                  :website)
   end
 
 end
