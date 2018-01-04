@@ -1,12 +1,12 @@
 class StoresController < ApplicationController
   skip_before_action :authenticate_user!
+  before_action :set_store, only: [:show, :edit, :update, :destroy]
 
   def index
     @stores = Store.all
   end
 
   def show
-    @store = Store.find(params[:id])
   end
 
 
@@ -25,22 +25,23 @@ class StoresController < ApplicationController
   end
 
   def edit
-    @store = Store.find(params[:id])
   end
 
   def update
-    @store = Store.find(params[:id])
     @store.update(store_params)
     redirect_to store_path(@store)
   end
 
   def destroy
-    @store = Store.find(params[:id])
     @store.destroy
-    redirect_to store_path
+    redirect_to stores_path
   end
 
   private
+
+  def set_store
+    @store = Store.find(params[:id])
+  end
 
   def store_params
     params.require(:store).permit(:name,
