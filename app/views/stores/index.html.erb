@@ -4,7 +4,7 @@
       <div id="stores">
         <% @stores.each do |store| %>
           <h4>
-            <%= link_to store.name, store_path(store.id) %>
+            <%= link_to store.name, store_path(store) %>
           </h4>
           <p><%= store.category  %> || <%= store.crypto %></p>
           <p><%= store.address  %> <%= store.postcode %></p>

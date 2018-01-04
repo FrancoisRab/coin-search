@@ -11,5 +11,8 @@
 
 <%= link_to 'Accueil', root_path %>
 <% if user_signed_in? %>
-  || <%= link_to 'Edit', edit_store_path %> || <%= link_to 'Supprimer', store_path, method: :delete %>
+  <%= link_to 'Edit', edit_store_path %> |
+  <%= link_to "Delete", store_path(@store),
+        method: :delete,
+        data: { confirm: "Veux-tu vraiment supprimer ce magasin ?" } %>
 <% end %>
