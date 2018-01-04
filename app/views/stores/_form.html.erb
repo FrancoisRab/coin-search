@@ -1,8 +1,12 @@
 <%= simple_form_for(@store) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category %>
+  <%= f.input :name, label: 'Le nom de votre commerce'%>
+  <%= f.input :category, label: 'Categorie', selected: [ "Bar" ], collection: [ "Bar", "Restaurant", "Hotel", "Coworking", "Soins", "Autres"] %>
   <%= f.input :description %>
-  <%= f.input :address %>
-  <%= f.input :postcode %>
+  <%= f.input :address, label: 'Adresse' %>
+  <%= f.input :postcode, label: 'Arrondissement', collection: 75001..75020, selected: 75001 %>
+  <%= f.input :opening_hours, label: "Heures d'ouvertures" %>
+  <%= f.input :crypto, label: "Vous acceptez quelle(s) cryptomonnaie(s) ?" %>
+  <%= f.input :contact, label: "Téléphone ou email" %>
+  <%= f.input :website, label: "Site internet" %>
   <%= f.button :submit, class: "btn btn-primary", value: "Valider"  %>
 <% end %>

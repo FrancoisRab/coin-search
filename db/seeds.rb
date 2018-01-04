@@ -19,7 +19,9 @@ stores_attributes = [
 ]
 
 
-Store.create!(stores_attributes)
+store = Store.new(stores_attributes)
+store.user = current_user
+store.save
 
 
 
