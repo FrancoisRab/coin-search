@@ -3,7 +3,9 @@
     <div class="col-sm-8 col-sm-offset-2">
       <div id="stores">
         <% @stores.each do |store| %>
-          <h4><%= store.name %></h4>
+          <h4>
+            <%= link_to store.name, store_path(store.id) %>
+          </h4>
           <p><%= store.category  %> || <%= store.crypto %></p>
           <p><%= store.address  %> <%= store.postcode %></p>
           <p><strong>Ouverture </strong>: <%= store.opening_hours %></p>
