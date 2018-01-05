@@ -1,0 +1,29 @@
+.content-form {
+  position: absolute;
+  top: 30%;
+  left: 43%;
+}
+
+.content-form-password {
+  position: absolute;
+  top: 30%;
+  left: 37%;
+}
+
+.form {
+  padding: 30px;
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.form-actions {
+  text-align: center;
+}
+.form-links {
+  text-align: center;
+  a:hover {
+    text-decoration: none;
+    color: green;
+  }
+}
+
