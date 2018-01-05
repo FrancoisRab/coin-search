@@ -52,7 +52,8 @@ class StoresController < ApplicationController
                                   :opening_hours,
                                   :crypto,
                                   :contact,
-                                  :website)
+                                  :website,
+                                  :photo)
   end
 
 end
