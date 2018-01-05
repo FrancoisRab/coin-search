@@ -4,23 +4,25 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+#Ruby version
+ruby '2.3.5'
 
-# #Connection
-# gem 'google-api-client', :require => 'google/api_client'
-# gem 'omniauth'
-# gem 'omniauth-google-oauth2'
-
-gem 'jquery-rails'
+#Gestion upload photo
+#carrierwave
+gem 'carrierwave', '~> 1.2'
+#figaro
+gem 'figaro'
+#Cloudinary
+gem 'cloudinary'
 #Search
 gem 'pg_search'
-
 #pundit
 gem "pundit"
-
 #devise
 gem 'devise'
 
 #Front
+gem 'jquery-rails'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'

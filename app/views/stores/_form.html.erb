@@ -8,5 +8,7 @@
   <%= f.input :crypto, label: "Vous acceptez quelle(s) cryptomonnaie(s) ?" %>
   <%= f.input :contact, label: "Téléphone ou email" %>
   <%= f.input :website, label: "Site internet" %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.button :submit, class: "btn btn-primary", value: "Valider"  %>
 <% end %>
