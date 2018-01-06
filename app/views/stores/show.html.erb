@@ -8,6 +8,9 @@
 <p><%= @store.crypto %></p>
 <p><%= @store.contact %></p>
 <p><%= link_to @store.website, @store.website, target: "_blank" %></p>
+<p>Ajouté par <em><%= @user.email %></em></p>
+
+<hr>
 
 <p><%= link_to 'Accueil', root_path %></p>
 <% if user_signed_in? %>

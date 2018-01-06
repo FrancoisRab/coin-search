@@ -7,6 +7,8 @@ class StoresController < ApplicationController
   end
 
   def show
+    @store_user = @store.user_id
+    @user = User.find(@store_user)
   end
 
 
