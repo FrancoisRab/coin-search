@@ -5,19 +5,30 @@ class StorePolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    true   # Anyone can view a store
+  end
+
   def show?
-    true  # Anyone can view a restaurant
+    true  # Anyone can view a store
   end
 
   def create?
-    true  # Anyone can create a restaurant
+    user.present?  # only register user
   end
 
   def update?
-    record.user == user  # Only restaurant creator can update it
+    return true if user.present? && user == store.user #Only store creator can update it
   end
 
   def destroy?
-    record.user == user  # Only restaurant creator can update it
+    return true if user.present? && user == store.user # Only store creator can delete it
+  end
+
+
+  private
+
+  def store
+    record
   end
 end
