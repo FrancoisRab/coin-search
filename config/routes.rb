@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
 resources :stores
 resources :search, only: [:index]
+resources :profiles, only: [:index]
 
 end
