@@ -8,7 +8,15 @@ class Store < ApplicationRecord
   validates :crypto, presence: true
 
   include PgSearch
-  pg_search_scope :search, against: [:name, :category, :address, :postcode]
+  pg_search_scope :search, against: [:name,
+                                     :category,
+                                     :address,
+                                     :postcode,
+                                     :crypto,
+                                     :description],
+  using: {
+        tsearch: { prefix: true } # <-- now `superman batm` will return something!
+      }
 
   mount_uploader :photo, PhotoUploader
 end

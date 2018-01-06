@@ -1,2 +1,13 @@
-<h1>index du model search</h1>
-<%= @stores.name %>
+<h1>Recherche</h1>
+<div class="container">
+  <%= form_tag(search_index_path, method: "get") do %>
+    <%= text_field_tag :search, nil, placeholder: 'Adresse, bar, restaurant…', class: "form-control" %>
+    <%= submit_tag "Rechercher", class: "btn btn-success" %>
+  <% end %>
+</div>
+
+<% @search.each do |store| %>
+  <h4>
+    <%= link_to store.name, store_path(store), target: "_blank" %>
+  </h4>
+<% end %>
