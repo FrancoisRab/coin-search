@@ -13,15 +13,22 @@
       <p>
         <%= link_to 'Commerces', stores_path %>
       </p>
-      <p>
-        <%= link_to 'Ajouter mon commerce', new_store_path %>
-      </p>
-      <p>
-        <%= link_to 'Mon profil', profiles_path %>
-      </p>
-      <p>
-        <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete %>
-      </p>
+
+      <div class="dropdown">
+        <a href="/" class="dropdown-toggle user-picture" data-toggle="dropdown"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <p>
+            <%= link_to 'Ajouter', new_store_path, class: "dropdown-item" %>
+          </p>
+          <p>
+            <%= link_to 'Mon profil', profiles_path, class: "dropdown-item" %>
+          </p>
+          <p>
+            <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </p>
+        </div>
+      </div>
     </div>
 
   <% else %>
