@@ -9,11 +9,18 @@
 <p><%= @store.contact %></p>
 <p><%= link_to @store.website, @store.website, target: "_blank" %></p>
 
-
-<%= link_to 'Accueil', root_path %>
+<p><%= link_to 'Accueil', root_path %></p>
 <% if user_signed_in? %>
- | <%= link_to 'Edit', edit_store_path %> |
-  <%= link_to "Delete", store_path(@store),
-        method: :delete,
-        data: { confirm: "Veux-tu vraiment supprimer ce magasin ?" } %>
+  <p>
+    <% if policy(@store).update? %>
+      <%= link_to 'Edit', edit_store_path %>
+    <% end %>
+  </p>
+  <p>
+    <% if policy(@store).destroy? %>
+      <%= link_to "Delete", store_path(@store),
+            method: :delete,
+            data: { confirm: "Veux-tu vraiment supprimer ce magasin ?" } %>
+    <% end %>
+  </p>
 <% end %>
