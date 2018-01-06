@@ -1,7 +1,7 @@
 <h1>Recherche</h1>
 <div class="container">
   <%= form_tag(search_index_path, method: "get") do %>
-    <%= text_field_tag :search, nil, placeholder: 'Adresse, bar, restaurant…', class: "form-control" %>
+    <%= text_field_tag :query, nil, placeholder: 'Adresse, bar, restaurant…', class: "form-control" %>
     <%= submit_tag "Rechercher", class: "btn btn-success" %>
   <% end %>
 </div>
