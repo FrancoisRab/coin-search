@@ -1,3 +1,7 @@
+body a:hover {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: 'Archivo Black', sans-serif;
 }
@@ -16,4 +20,8 @@ p {
 
 .cards-space {
   padding: 10px;
+}
+
+.card:hover {
+  color:yellow;
 }
