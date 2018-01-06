@@ -4,8 +4,10 @@
       <%= image_tag "bitcoins.png" %>
     </div>
     <div class="header-search text-center">
-      <input type="text" name="query" id="query" placeholder="Adresse, bar, restaurant…">
-      <input type="submit" value="Rechercher" class="btn btn-default">
+      <%= form_tag(search_index_path, method: "get") do %>
+        <%= text_field_tag :search, nil, placeholder: 'Adresse, bar, restaurant…', class: "form-control" %>
+        <%= submit_tag "Rechercher", class: "btn btn-success" %>
+      <% end %>
     </div>
   </div>
 </div>

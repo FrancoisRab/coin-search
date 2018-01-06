@@ -3,7 +3,7 @@ class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
 
   def index
-  @stores = policy_scope(Store)
+  @stores = policy_scope(Store).order(created_at: :desc)
   end
 
   def show
