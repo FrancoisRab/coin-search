@@ -28,10 +28,14 @@
   a {
     padding-left: 10px;
   }
-  p > a {
-    text-decoration: none;
-  }
-  p > a:hover {
+  a:hover {
     color: green;
   }
 }
+
+.user-picture {
+  font-size: 40px;
+}
+ .dropdown   p > a {
+    color: black;
+  }
