@@ -1,7 +1,13 @@
 <h1>Hello <%= current_user.email %></h1>
 
-<% @magasins.each do |store| %>
-  <h4>
-    <%= link_to store.name, store_path(store), target: "_blank" %>
-  </h4>
-<% end %>
+<div class="container">
+  <%= link_to 'Ajouter mon commerce', new_store_path, class: "btn btn-success" %>
+</div>
+
+<div class="container">
+  <% @magasins.each do |store| %>
+    <h4>
+      <%= link_to store.name, store_path(store), target: "_blank" %>
+    </h4>
+  <% end %>
+</div>
