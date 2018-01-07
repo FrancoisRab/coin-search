@@ -18,12 +18,18 @@ p {
   padding-bottom: 35px;
 }
 
+/* CARDS*/
+
 .cards-space {
   padding: 10px;
 }
 
 .card:hover {
   color:yellow;
+}
+
+.wrapper-cards {
+  padding-bottom: 60px;
 }
 
 /*SEARCH - BAR*/
@@ -44,6 +50,10 @@ p {
   border: none;
 }
 
+.input-search:focus {
+  outline: none;
+}
+
 .btn-search {
   background-color: #F8BA3F;
   width: 110px;
@@ -56,4 +66,11 @@ p {
   padding: 4px;
   font-size: 25px;
   color: cornsilk;
+}
+
+
+/* MAP */
+
+.wrapper-map {
+  padding-bottom: 60px;
 }

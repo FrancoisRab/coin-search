@@ -3,7 +3,7 @@
     <div class="header-img text-center">
       <%= image_tag "bitcoins.png" %>
     </div>
-    <div class="header-search text-center">
+    <div class="header-search">
       <div class="search-bar">
         <div class="search-icon">
           <i class="fa fa-search" aria-hidden="true"></i>
@@ -21,71 +21,86 @@
   </div>
 </div>
 
+<div class="wrapper-cards">
+  <div class="container">
+    <div class="row cards-space">
+        <div class="col-xs-12 col-sm-4">
+          <!-- insert <div class="card"> -->
+          <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=bar" do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Bars</h2>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <!-- insert <div class="card"> -->
+          <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=restaurant" do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Restaurants</h2>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <!-- insert <div class="card"> -->
+          <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=hotel" do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Hotels</h2>
+              </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+    <div class="row cards-space">
+        <div class="col-xs-12 col-sm-4">
+          <!-- insert <div class="card"> -->
+          <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=coworking" do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Coworking</h2>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <!-- insert <div class="card"> -->
+          <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=soins" do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Soins</h2>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <!-- insert <div class="card"> -->
+          <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=autres" do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+              <div class="card-description">
+                <h2>Autres</h2>
+              </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="container">
-  <div class="row cards-space">
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-        <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=bar" do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="card-description">
-              <h2>Bars</h2>
-            </div>
-          </div>
-        <% end %>
+  <hr>
+</div>
 
+<div class="wrapper-map text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Ici une map sera</h1>
       </div>
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-        <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=restaurant" do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="card-description">
-              <h2>Restaurants</h2>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-        <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=hotel" do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="card-description">
-              <h2>Hotels</h2>
-            </div>
-          </div>
-        <% end %>
-      </div>
-  </div>
-  <div class="row cards-space">
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-        <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=coworking" do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="card-description">
-              <h2>Coworking</h2>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-        <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=soins" do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="card-description">
-              <h2>Soins</h2>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-sm-4">
-        <!-- insert <div class="card"> -->
-        <%= link_to "http://localhost:3000/search?utf8=%E2%9C%93&query=autres" do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="card-description">
-              <h2>Autres</h2>
-            </div>
-          </div>
-        <% end %>
-      </div>
+    </div>
   </div>
 </div>
