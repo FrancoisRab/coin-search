@@ -10,14 +10,6 @@ p {
   font-family: 'Tenor Sans', sans-serif;
 }
 
-.header {
-  padding: 50px;
-}
-
-.header-img {
-  padding-bottom: 35px;
-}
-
 /* CARDS*/
 
 .cards-space {
@@ -30,12 +22,15 @@ p {
 
 .wrapper-cards {
   padding-bottom: 60px;
+  padding-top: 60px;
 }
 
 /*SEARCH - BAR*/
 .header-search {
   display: flex;
   justify-content: space-around;
+  background-color: white;
+  border-radius: 3px;
 }
 
 .search-bar {
