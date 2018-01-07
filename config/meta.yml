@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Coin de Paris"
+meta_title: "Coin de Paris - Payez en crypto"
+meta_description: "Ne cherchez plus où payer en bitcoin, trouvez !"
+meta_image: "cover.png"                       # should exist in `app/assets/images/`
+twitter_account: "@FrancoisRabanel"   # required for Twitter Cards
