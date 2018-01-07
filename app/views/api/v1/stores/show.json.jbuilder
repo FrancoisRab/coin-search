@@ -1,1 +1,10 @@
-json.extract! @store, :id, :name, :address
+json.extract! @store, :id,
+                       :name,
+                       :category,
+                       :description,
+                       :address,
+                       :postcode,
+                       :opening_hours,
+                       :crypto,
+                       :contact,
+                       :website
