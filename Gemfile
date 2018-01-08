@@ -4,8 +4,6 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-#Ruby version
-ruby '2.3.5'
 
 #Geocoding
 gem "geocoder"
@@ -13,8 +11,12 @@ gem "geocoder"
 #Gestion upload photo
 #carrierwave
 gem 'carrierwave', '~> 1.2'
+#Ruby version
+ruby '2.3.5'
 #figaro
-gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'figaro', '>= 1.0.0.rc1'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.1.4'
 #Cloudinary
 gem 'cloudinary'
 
@@ -32,8 +34,6 @@ gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
 gem 'simple_form'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
