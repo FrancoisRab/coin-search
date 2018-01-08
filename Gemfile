@@ -7,6 +7,9 @@ end
 #Ruby version
 ruby '2.3.5'
 
+#Geocoding
+gem "geocoder"
+
 #Gestion upload photo
 #carrierwave
 gem 'carrierwave', '~> 1.2'
@@ -14,6 +17,7 @@ gem 'carrierwave', '~> 1.2'
 gem 'figaro'
 #Cloudinary
 gem 'cloudinary'
+
 #Search
 gem 'pg_search'
 #pundit

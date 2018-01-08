@@ -4,31 +4,51 @@ Store.destroy_all
 puts "Creating stores..."
 
 stores_attributes = [
-{
-  category: "Antiquaire",
-  name: "Marie & Benoit",
-  description: "description",
-  address: "6 passage du grand cerf",
-  postcode: 75002,
-  opening_hours: "opening hours",
-  crypto: "Bitcoin",
-  website: "site internet",
-  contact: "06 62 30 14 92"
-
-}
+  {
+    user_id: 2,
+    open: true,
+    category: "Antiquaire",
+    name: "Marie & Benoit",
+    description: "description",
+    address: "6 passage du grand cerf, Paris",
+    postcode: 75012,
+    opening_hours: "opening hours",
+    crypto: "Bitcoin",
+    website: "site internet",
+    contact: "06 62 30 14 92",
+  },
+  {
+    user_id: 2,
+    open: true,
+    category: "Coworking",
+    name: "La Maison du Bitcoin",
+    description: "Venez découvrir le monde des crypto",
+    address: "35 rue du Caire, Paris",
+    postcode: 75002,
+    opening_hours: "9h30 - 20h",
+    crypto: "Bitcoin",
+    website: "https://lamaisondubitcoin.fr/",
+    contact: "06 62 30 14 92",
+  },
+  {
+    user_id: 2,
+    open: true,
+    category: "Bar",
+    name: "Sof's Bar",
+    description: "Le premier bar parisien qui accèpte les cryptos",
+    address: "43 rue saint sauveur, Paris",
+    postcode: 75002,
+    opening_hours: "10h30 - 2h",
+    crypto: "Bitcoin",
+    website: "http://www.sofsbar.fr/",
+    contact: "contact@sofsbar.fr",
+  }
 ]
 
 
-store = Store.new(stores_attributes)
-store.user = current_user
-store.save
+Store.create!(stores_attributes)
+
 
 
 
 puts "Finished!"
-
-
-  # contact = {
-  #   phone: "06 62 30 14 92",
-  #   email: "mariebenoit.iledere@gmail.com"
-  # }
