@@ -254,7 +254,7 @@ DEPENDENCIES
   cloudinary
   coffee-rails (~> 4.2)
   devise
-  figaro
+  figaro (~> 1.1, >= 1.1.1)
   font-awesome-sass
   geocoder
   jbuilder (~> 2.5)

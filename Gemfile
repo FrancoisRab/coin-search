@@ -14,7 +14,7 @@ gem "geocoder"
 #carrierwave
 gem 'carrierwave', '~> 1.2'
 #figaro
-gem 'figaro'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 #Cloudinary
 gem 'cloudinary'
 
