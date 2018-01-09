@@ -4,6 +4,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+#Ruby version
+ruby '2.3.5'
 
 #Geocoding
 gem "geocoder"
@@ -11,10 +13,8 @@ gem "geocoder"
 #Gestion upload photo
 #carrierwave
 gem 'carrierwave', '~> 1.2'
-#Ruby version
-ruby '2.3.5'
 #figaro
-gem 'figaro', '>= 1.0.0.rc1'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 #Cloudinary
