@@ -8,7 +8,7 @@
   <div class="list-stores">
     <% @magasins.each do |store| %>
         <h4>
-          <%= link_to store.name, store_path(store), target: "_blank" %>
+          <%= link_to store.name, store_path(store)%>
           <% if policy(store).update? %>
             <%= link_to edit_store_path(store) do %>
               <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
