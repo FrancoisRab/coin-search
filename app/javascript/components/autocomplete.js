@@ -15,7 +15,6 @@ function autocomplete() {
 
 var input = document.getElementById('store_address');
 var options = {
-  types: ['(cities)'],
   componentRestrictions: {country: 'fr'}
 };
 
