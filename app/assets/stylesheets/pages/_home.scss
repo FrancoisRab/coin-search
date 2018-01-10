@@ -16,13 +16,45 @@ p {
   padding: 10px;
 }
 
-.card:hover {
-  color:yellow;
-}
-
 .wrapper-cards {
   padding-bottom: 60px;
   padding-top: 60px;
+  a {
+    color: #F8BA3F;
+  }
+  a:hover {
+    color: #41D3BD;
+  }
+}
+
+.card-bars {
+  background-image: url('http://res.cloudinary.com/pdcst/image/upload/v1515606362/bars_o9mjd3.png');
+  background-size: cover;
+}
+
+.card-restaurants {
+  background-image: url('http://res.cloudinary.com/pdcst/image/upload/v1515606362/Restaurants_c6opuf.png');
+  background-size: cover;
+}
+
+.card-hotels {
+  background-image: url('http://res.cloudinary.com/pdcst/image/upload/v1515606362/hotels_du4gwa.png');
+  background-size: cover;
+}
+
+.card-soins {
+  background-image: url('http://res.cloudinary.com/pdcst/image/upload/v1515606362/Soins_lfpt58.png');
+  background-size: cover;
+}
+
+.card-coworking {
+  background-image: url('http://res.cloudinary.com/pdcst/image/upload/v1515606362/Coworking_mk9cyf.png');
+  background-size: cover;
+}
+
+.card-autres {
+  background-image: url('http://res.cloudinary.com/pdcst/image/upload/v1515606362/Autres_v2eaw1.png');
+  background-size: cover;
 }
 
 /*SEARCH - BAR*/
@@ -68,4 +100,10 @@ p {
 
 .wrapper-map {
   padding-bottom: 60px;
+}
+
+/* HOW TO */
+
+.how-to-content {
+  display: flex;
 }
