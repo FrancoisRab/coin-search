@@ -1,3 +1,71 @@
-#stores h4 > a {
-  text-decoration: none;
+.wrapper-show {
+  background-color: rgba(236, 236, 236, 1.00);
+}
+
+.header {
+  background-color: white;
+  padding-left: 25px;
+}
+
+.back {
+  padding-top: 10px;
+}
+.back a {
+  color: black;
+}
+.back a:hover {
+  color: rgba(248, 186, 63, 1.00);
+}
+
+.header-title h1 {
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.header-content {
+  display: flex;
+}
+
+.header-category {
+  padding: 5px 10px;
+}
+
+.header-address {
+  padding: 5px 10px;
+}
+
+.header-website {
+  padding: 5px 10px;
+}
+
+.header-edit-delete {
+  padding: 5px 10px;
+  i {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  .icon-edit:hover {
+    color: green;
+  }
+  .icon-delete:hover {
+    color: red;
+  }
+}
+
+.section {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.store-content {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 5px 6px 16px -1px rgba(0,0,0,0.1);
+  padding: 15px;
+}
+
+.store-infos-crypto {
+  padding-top: 5px;
 }

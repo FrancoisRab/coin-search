@@ -1,29 +1,65 @@
-<%= cl_image_tag @store.photo, height: 300, width: 400, crop: :fill %>
-<h1> <%= @store.name %> </h1>
-<p><%= @store.category %></p>
-<p><%= @store.description %></p>
-<p><%= @store.address %></p>
-<p><%= @store.postcode %></p>
-<p><%= @store.opening_hours %></p>
-<p><%= @store.crypto %></p>
-<p><%= @store.contact %></p>
-<p><%= link_to @store.website, @store.website, target: "_blank" %></p>
-<p>Ajouté par <em><%= @user.email %></em></p>
+<div class="wrapper-show">
+  <div class="header">
+    <div class="back">
+      <p><%= link_to 'Retour', url_for(:back) %></p>
+    </div>
+    <div class="header-title">
+      <h1><%= @store.name %></h1>
+    </div>
+    <div class="header-content">
+      <div class="header-category">
+        <p>/<%= @store.category %></p>
+      </div>
+      <div class="header-address">
+        <p><i class="fa fa-map-marker" aria-hidden="true"></i>
+        <%= @store.address %> <%= @store.postcode %></p>
+      </div>
+      <div class="header-website">
+        <p><%= link_to @store.website, @store.website, target: "_blank" %></p>
+      </div>
+      <div class="header-edit-delete">
+        <% if user_signed_in? %>
+          <p>
+            <% if policy(@store).update? %>
+              <%= link_to edit_store_path do %>
+                <i class="fa fa-pencil-square-o icon-edit" aria-hidden="true"></i>
+              <% end %>
+            <% end %>
+            <% if policy(@store).destroy? %>
+              <%= link_to store_path(@store),
+                    method: :delete,
+                    data: { confirm: "Veux-tu vraiment supprimer ce magasin ?" } do %>
+                <i class="fa fa-trash-o icon-delete" aria-hidden="true"></i>
+              <% end %>
+            <% end %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<hr>
 
-<p><%= link_to 'Accueil', root_path %></p>
-<% if user_signed_in? %>
-  <p>
-    <% if policy(@store).update? %>
-      <%= link_to 'Edit', edit_store_path %>
-    <% end %>
-  </p>
-  <p>
-    <% if policy(@store).destroy? %>
-      <%= link_to "Delete", store_path(@store),
-            method: :delete,
-            data: { confirm: "Veux-tu vraiment supprimer ce magasin ?" } %>
-    <% end %>
-  </p>
-<% end %>
+  <div class="section">
+    <div class="store-content">
+      <div class="store-img-header text-center">
+        <%= cl_image_tag @store.photo, height: 220, width: 280, crop: :fill %>
+      </div>
+      <div class="store-infos">
+        <div class="store-infos-crypto">
+          <p><i class="fa fa-btc" aria-hidden="true"></i>
+          <%= @store.crypto %></p>
+        </div>
+        <div class="store-infos-hours">
+          <p><i class="fa fa-clock-o" aria-hidden="true"></i>
+          <%= @store.opening_hours %></p>
+        </div>
+          <p><i class="fa fa-user" aria-hidden="true"></i>
+          <%= @store.contact %></p>
+        <div class="store-description">
+          <p><%= @store.description %></p>
+          <p>Ajouté par <em><%= @user.email %></em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
