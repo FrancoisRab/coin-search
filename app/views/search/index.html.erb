@@ -1,13 +1,41 @@
-<h1>Recherche</h1>
-<div class="container">
-  <%= form_tag(search_index_path, method: "get") do %>
-    <%= text_field_tag :query, nil, placeholder: 'Adresse, bar, restaurant…', class: "form-control" %>
-    <%= submit_tag "Rechercher", class: "btn btn-success" %>
-  <% end %>
-</div>
+<div class="page-search">
+  <div class="header-search">
+    <div class="search-bar">
+      <div class="search-icon">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+      <div class="search-input">
+        <%= form_tag(search_index_path, method: "get") do %>
+          <%= text_field_tag :query, nil, placeholder: 'Adresse, bar, restaurant…', class: "input-search", id: "store_address" %>
+      </div>
+      <div class="search-btn">
+          <%= submit_tag "Chercher", class: "btn-search" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<% @search.each do |store| %>
-  <h4>
-    <%= link_to store.name, store_path(store), target: "_blank" %>
-  </h4>
-<% end %>
+  <div class="container cards-search">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div id="stores">
+          <% @search.each do |store| %>
+            <%= link_to store_path(store) do %>
+              <div class="product">
+                <%= cl_image_tag store.photo, height: 100, width: 200, crop: :fill, class: "product-image hidden-xs" %>
+                <div class='product-body'>
+                  <h3><%= link_to store.name, store_path(store) %></h3>
+                  <p><%= store.category %> | <%= store.crypto %></p>
+                </div>
+                <ul class="list-inline product-controls hidden-sm hidden-xs">
+                  <li><%= store.address %></li>
+                  <li><%= store.postcode %></li>
+                </ul>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
