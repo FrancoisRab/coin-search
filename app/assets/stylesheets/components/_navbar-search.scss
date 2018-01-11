@@ -1,0 +1,27 @@
+#list-inline-override > li {
+  display: inline-block;
+}
+
+
+.list-hover:hover {
+  color: #F8BA3F;
+}
+
+.list-btn {
+  font-weight: 300;
+  padding: 20px;
+  font-size: 16px;
+}
+
+#btn-bars {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 7px;
+}
+
+.btn-list {
+  border-right: 1px solid;
+  padding: 7px 31px 0px 27px;
+}
