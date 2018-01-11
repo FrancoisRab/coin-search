@@ -1,12 +1,36 @@
 <div class="page-search">
   <div class="navbar-search text-center">
     <ul class="list-btn" id="list-inline-override">
-      <li id="btn-bars"><p class="list-hover">Bars</p></li>
-      <li class="btn-list"><p class="list-hover">Restaurants</p></li>
-      <li class="btn-list"><p class="list-hover">Hotels</p></li>
-      <li class="btn-list"><p class="list-hover">Coworking</p></li>
-      <li class="btn-list"><p class="list-hover">Soins</p></li>
-      <li class="btn-list"><p class="list-hover">Autres</p></li>
+      <li id="btn-bars">
+        <p class="list-hover">
+          <%= link_to 'Bars', "https://coin-de-paris.herokuapp.com/search?utf8=%E2%9C%93&query=bar" %>
+        </p>
+      </li>
+      <li class="btn-list">
+        <p class="list-hover">
+          <%= link_to 'Restaurants', 'https://coin-de-paris.herokuapp.com/search?utf8=%E2%9C%93&query=restaurant' %>
+        </p>
+      </li>
+      <li class="btn-list">
+        <p class="list-hover">
+          <%= link_to 'Hotels', 'https://coin-de-paris.herokuapp.com/search?utf8=%E2%9C%93&query=hotel' %>
+        </p>
+      </li>
+      <li class="btn-list">
+        <p class="list-hover">
+          <%= link_to 'Coworking', 'https://coin-de-paris.herokuapp.com/search?utf8=%E2%9C%93&query=coworking' %>
+        </p>
+      </li>
+      <li class="btn-list">
+        <p class="list-hover">
+          <%= link_to 'Soins', 'https://coin-de-paris.herokuapp.com/search?utf8=%E2%9C%93&query=soins' %>
+        </p>
+      </li>
+      <li class="btn-list">
+        <p class="list-hover">
+          <%= link_to 'Autres', 'https://coin-de-paris.herokuapp.com/search?utf8=%E2%9C%93&query=autres' %>
+        </p>
+      </li>
     </ul>
   </div>
   <div class="header-search">

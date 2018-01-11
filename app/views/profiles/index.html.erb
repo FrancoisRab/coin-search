@@ -1,27 +1,43 @@
-<h1>Hello <%= current_user.email %></h1>
-
-<div class="container">
-  <div class="btn-add">
-    <%= link_to 'Ajouter mon commerce', new_store_path, class: "btn btn-success" %>
+<div class="wrapper-profil">
+  <div class="header-title">
+    <h1>Hello <em><%= current_user.email %></em> !</h1>
   </div>
-
-  <div class="list-stores">
-    <% @magasins.each do |store| %>
-        <h4>
-          <%= link_to store.name, store_path(store)%>
-          <% if policy(store).update? %>
-            <%= link_to edit_store_path(store) do %>
-              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  <div class="btn-section">
+    <div class="btn-add">
+      <%= link_to 'Ajouter mon commerce', new_store_path, class: "btn-override" %>
+    </div>
+    <div class="btn-profil">
+      <%= link_to 'Modifier mon profil', edit_user_registration_path, class: 'btn-override-profil' %>
+    </div>
+  </div>
+  <div class="profil-store-content">
+    <ul class='list-inline text-center'>
+      <% @magasins.each do |store| %>
+        <li>
+          <div class="profil-store-content-img">
+            <%= cl_image_tag store.photo, height: 220, width: 280, crop: :fill %>
+          </div>
+          <div class="profil-store-content-title">
+            <h4>
+              <%= link_to store.name, store_path(store)%>
+            </h4>
+          </div>
+          <div class="profil-store-content-edit">
+            <% if policy(store).update? %>
+              <%= link_to edit_store_path(store) do %>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <% end %>
             <% end %>
-          <% end %>
-          <% if policy(store).destroy? %>
-            <%= link_to store_path(store),
-                  method: :delete,
-                  data: { confirm: "Veux-tu vraiment supprimer ce magasin ?" } do %>
-              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <% if policy(store).destroy? %>
+              <%= link_to store_path(store),
+                    method: :delete,
+                    data: { confirm: "Veux-tu vraiment supprimer ce magasin ?" } do %>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+              <% end %>
             <% end %>
-          <% end %>
-        </h4>
-    <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>

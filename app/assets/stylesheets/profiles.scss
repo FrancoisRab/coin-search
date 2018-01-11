@@ -2,3 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.wrapper-profil {
+  padding-bottom: 300px;
+}
+
+.btn-section {
+  display: flex;
+  padding: 30px 10px 30px 10px;
+}
+
+.btn-add {
+  padding: 10px 10px 10px 10px;
+}
+
+.btn-profil {
+  padding: 10px 10px 10px 10px;
+}
+
+.btn-override {
+  color: #F8BA3F;
+  border: 1px solid #F8BA3F;
+  padding: 10px;
+}
+
+
+.btn-override:hover {
+  background-color: #F8BA3F;
+  color: white;
+}
+
+.btn-override-profil {
+  color: #46CE90;
+  border: 1px solid #46CE90;
+  padding: 10px;
+}
+
+
+.btn-override-profil:hover {
+  background-color: #46CE90;
+  color: white;
+}
