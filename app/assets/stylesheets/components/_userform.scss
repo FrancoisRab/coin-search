@@ -1,19 +1,18 @@
 .content-form {
-  position: absolute;
-  top: 30%;
-  left: 43%;
+  padding-bottom: 200px;
+  padding-top: 60px;
 }
 
-.content-form-password {
-  position: absolute;
-  top: 30%;
-  left: 37%;
+.form-pwd {
+  padding: 25px;
+  border: 1px solid grey;
+  border-radius: 6px;
 }
 
 .form {
   padding: 30px;
   border: 1px solid grey;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 .form-actions {
@@ -26,4 +25,3 @@
     color: green;
   }
 }
-
