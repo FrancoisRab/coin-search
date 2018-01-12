@@ -36,13 +36,14 @@
   position: relative;
   width: 160px;
   height: 190px;
+  i {
+    color: red;
+  }
 }
 
-i {
-  color: red;
-}
 
 .made-by-content {
   position: absolute;
   bottom: 0px;
   right: 0px;
+}
