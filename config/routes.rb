@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "pages#home"
 
+  get '/google4d9e386ef35cdb35', to: 'pages#google4d9e386ef35cdb35'
+
   resources :stores
 
   namespace :api, defaults: { format: :json } do
