@@ -8,7 +8,6 @@ class SearchController < ApplicationController
       @search = Store.near(params[:query],5)
     end
     @search = Store.search(params[:query])
-    raise
     authorize @search
   else
     @search = Store.all
