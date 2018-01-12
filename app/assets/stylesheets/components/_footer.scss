@@ -1,7 +1,7 @@
 .footer-content {
   background-color: #fabb2d;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 200px;
@@ -17,12 +17,33 @@
     text-decoration: none;
     color: green;
   }
+  li {
+    list-style: none;
+  }
 }
 
 .footer-left {
   padding: 50px;
+  width: 372px;
 }
 
 .footer-right {
   padding: 50px;
+}
+
+
+.made-by {
+  position: relative;
+  width: 160px;
+  height: 190px;
+}
+
+i {
+  color: red;
+}
+
+.made-by-content {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
