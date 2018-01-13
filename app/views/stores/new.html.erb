@@ -1,10 +1,12 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <h1>Ajoutez votre boutique</h1>
-      <%= render 'form' %>
-      <!-- url_for(:back) récupère l'url visitée avant le form -->
-      <%= link_to 'Retour', url_for(:back) %>
+<div class="wrapper-form-stores">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <h1>Ajoutez votre boutique</h1>
+        <%= render 'form' %>
+        <!-- url_for(:back) récupère l'url visitée avant le form -->
+        <%= link_to 'Retour', url_for(:back) %>
+      </div>
     </div>
   </div>
 </div>
