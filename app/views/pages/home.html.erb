@@ -16,6 +16,17 @@
             <%= submit_tag "Chercher", class: "btn-search" %>
           <% end %>
         </div>
+        <div class="test-search-by-location">
+          <%= form_tag search_index_path, method: :get do %>
+            <%= label :location, "Search classifieds near : " %>
+            <%= text_field_tag :location, params[:location] %>
+
+            <%= label :distance, "Distance : " %>
+            <%= text_field_tag :distance, params[:distance] %>
+
+            <%= submit_tag "Search" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

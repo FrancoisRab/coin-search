@@ -4,16 +4,21 @@ class SearchController < ApplicationController
   def index
   @stores = policy_scope(Store).order(created_at: :desc)
   if params[:query].present?
-    if params[:query].include? (0..300).to_s
-      @search = Store.near(params[:query],5)
-    end
-    @search = Store.search(params[:query])
+    @search = Store.near(params[:query], 1)
     authorize @search
   else
     @search = Store.all
     authorize @search
   end
 
+  # if params[:location].present?
+  #   @search = Store.near(params[:location], params[:distance] || 10, order: :distance)
+  # else
+  #   @search = Store.all
+  # end
+
+    user_ip2 = request.ip
+    raise
  end
 end
 
