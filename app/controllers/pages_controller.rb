@@ -7,8 +7,12 @@ class PagesController < ApplicationController
         @markers = @stores.map do |store|
           {
             lat: store.latitude,
-            lng: store.longitude#,
-            # infoWindow: { content: render_to_string(partial: "/stores/map_box", locals: { store: store }) }
+            lng: store.longitude,
+            infoWindow: { content: '<a href="/stores/' + store.id.to_s + '">' + store.name + '</a><br/>' +
+                                   store.category +
+                                   '<br>' +
+                                   store.address
+            }
           }
         end
   end

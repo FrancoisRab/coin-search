@@ -1,7 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(248, 186, 63, 0.4) 0%, rgba(245, 199, 109, 0.4) 50%), url('http://res.cloudinary.com/pdcst/image/upload/v1515337412/banner_jirblx.jpg');">
   <div class="banner-content">
     <div class="banner-header-text">
-      <h1>Où payer en Bitcoin à Paris ?</h1>
+      <h1>Trouvez où payer en Bitcoin à Paris ?</h1>
     </div>
     <div class="header-search">
       <div class="search-bar">
@@ -10,21 +10,10 @@
         </div>
         <div class="search-input">
           <%= form_tag(search_index_path, method: "get") do %>
-            <%= text_field_tag :query, nil, placeholder: 'Adresse, bar, restaurant…', class: "input-search", id: "store_address" %>
+            <%= text_field_tag :query, nil, placeholder: 'ex: 34 rue du Caire, Paris', class: "input-search", id: "store_address" %>
         </div>
         <div class="search-btn">
             <%= submit_tag "Chercher", class: "btn-search" %>
-          <% end %>
-        </div>
-        <div class="test-search-by-location">
-          <%= form_tag search_index_path, method: :get do %>
-            <%= label :location, "Search classifieds near : " %>
-            <%= text_field_tag :location, params[:location] %>
-
-            <%= label :distance, "Distance : " %>
-            <%= text_field_tag :distance, params[:distance] %>
-
-            <%= submit_tag "Search" %>
           <% end %>
         </div>
       </div>

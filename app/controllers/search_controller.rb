@@ -2,23 +2,28 @@ class SearchController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
+  # recherche en fonction de ma position
+  # recherche avec adresse
+  # recherche avec nom
+
   @stores = policy_scope(Store).order(created_at: :desc)
+  @user = request.ip
+
   if params[:query].present?
-    @search = Store.near(params[:query], 1)
+    if params[:distance].present?
+      @search = Store.near(params[:query], params[:distance])
+      authorize @search
+    else
+      @search = Store.near(params[:query], 2)
+      authorize @search
+    end
+  elsif params[:categorie].present?
+    @search = Store.search(params[:categorie])
     authorize @search
   else
     @search = Store.all
     authorize @search
   end
-
-  # if params[:location].present?
-  #   @search = Store.near(params[:location], params[:distance] || 10, order: :distance)
-  # else
-  #   @search = Store.all
-  # end
-
-    user_ip2 = request.ip
-    raise
  end
 end
 
