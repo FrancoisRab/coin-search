@@ -41,8 +41,6 @@
       <div class="search-input">
         <%= form_tag(search_index_path, method: "get") do %>
           <%= text_field_tag :query, nil, placeholder: 'Adresse, bar, restaurant…', class: "input-search", id: "store_address" %>
-          <%= select_tag :categorie, options_for_select(['Bar', 'Cowork'], 'Bar'), class: 'input-search' %>
-          <%= select_tag :distance, options_for_select(1..5, 1), class: 'input-search' %>
       </div>
       <div class="search-btn">
           <%= submit_tag "Chercher", class: "btn-search" %>
@@ -51,7 +49,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container wrapper-map-search">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
         <div
@@ -69,7 +67,25 @@
       <div class="col-sm-8 col-sm-offset-2">
         <div id="stores">
           <% if @search.length == 0 %>
-            <h1>Désolé, pour l'instant il n'y a aucun commerce proche de cette adresse.</h1>
+            <center>
+              <h1>Désolé, pour l'instant il n'y a aucun commerce proche de cette adresse.</h1>
+              <p><h2><em>Voici une liste de tous les commerces :</em></h2></p>
+            </center>
+            <% @stores.each do |store| %>
+              <%= link_to store_path(store) do %>
+                <div class="product">
+                  <%= cl_image_tag store.photo, height: 100, width: 200, crop: :fill, class: "product-image hidden-xs" %>
+                  <div class='product-body'>
+                    <h3><%= link_to store.name, store_path(store) %></h3>
+                    <p><%= store.category %> | <%= store.crypto %></p>
+                  </div>
+                  <ul class="list-inline product-controls hidden-sm hidden-xs">
+                    <li><%= store.address %></li>
+                    <li><%= store.postcode %></li>
+                  </ul>
+                </div>
+              <% end %>
+            <% end %>
           <% else %>
             <% @search.each do |store| %>
               <%= link_to store_path(store) do %>

@@ -25,7 +25,6 @@ class SearchController < ApplicationController
     authorize @search
   end
 
-
       @markers = @search.map do |store|
         {
           lat: store.latitude,
