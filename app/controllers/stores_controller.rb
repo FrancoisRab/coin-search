@@ -4,6 +4,19 @@ class StoresController < ApplicationController
 
   def index
     @stores = policy_scope(Store).order(created_at: :desc)
+    @stores2 = Store.where.not(latitude: nil, longitude: nil)
+
+        @markers = @stores2.map do |store|
+          {
+            lat: store.latitude,
+            lng: store.longitude,
+            infoWindow: { content: '<a href="/stores/' + store.id.to_s + '">' + store.name + '</a><br/>' +
+                                   store.category +
+                                   '<br>' +
+                                   store.address
+            }
+          }
+        end
   end
 
   def show

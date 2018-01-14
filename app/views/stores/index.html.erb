@@ -41,10 +41,25 @@
       <div class="search-input">
         <%= form_tag(search_index_path, method: "get") do %>
           <%= text_field_tag :query, nil, placeholder: 'Adresse, bar, restaurant…', class: "input-search", id: "store_address" %>
+          <%= select_tag :categorie, options_for_select(['Bar', 'Cowork'], 'Bar'), class: 'input-search' %>
+          <%= select_tag :distance, options_for_select(1..5, 1), class: 'input-search' %>
       </div>
       <div class="search-btn">
           <%= submit_tag "Chercher", class: "btn-search" %>
         <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div
+          id="map"
+          style="width: 100%;
+          height: 400px;"
+          data-markers="<%= @markers.to_json %>"
+        ></div>
       </div>
     </div>
   </div>
