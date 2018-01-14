@@ -28,6 +28,10 @@ h1, h2, h3, h4, h5 {
   font-family: 'Tenor Sans', sans-serif;
 }*/
 
+.wrapper-home {
+  padding-bottom: 200px;
+}
+
 /* CARDS*/
 
 .cards-space {
@@ -124,11 +128,65 @@ h1, h2, h3, h4, h5 {
 /* MAP */
 
 .wrapper-map {
-  padding-bottom: 200px;
+  padding-bottom: 20px;
 }
 
-/* HOW TO */
+/* LAST STORES */
 
-.how-to-content {
+.card-description {
   display: flex;
+  justify-content: center;
 }
+
+.wrapper-last-stores {
+
+}
+
+.last-store-card {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.last-store-description {
+  display: flex;
+  justify-content: space-around;
+}
+
+.last-store-description-name {
+  padding: 55px;
+}
+
+.last-store-description-cat {
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
