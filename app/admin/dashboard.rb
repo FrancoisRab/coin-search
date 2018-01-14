@@ -14,16 +14,20 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "Recent stores" do
           ul do
-            Store.last(10).reverse.each do |post|
-              li link_to(post.name, admin_store_path(post))
+            Store.last(20).reverse.each do |store|
+              li link_to(store.name, admin_store_path(store))
             end
           end
         end
       end
 
       column do
-        panel "Info" do
-          para "Page Admin permettant de gérer les users et les commerces ma men !"
+        panel "Recent users" do
+          ul do
+            User.last(20).reverse.each do |user|
+              li link_to(user.email, admin_store_path(user))
+            end
+          end
         end
       end
     end
