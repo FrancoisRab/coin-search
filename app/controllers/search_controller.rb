@@ -10,13 +10,8 @@ class SearchController < ApplicationController
   @user = request.ip
 
   if params[:query].present?
-    if params[:distance].present?
-      @search = Store.near(params[:query], params[:distance])
-      authorize @search
-    else
-      @search = Store.near(params[:query], 2)
-      authorize @search
-    end
+    @search = Store.near(params[:query], 2)
+    authorize @search
   elsif params[:categorie].present?
     @search = Store.search(params[:categorie])
     authorize @search
