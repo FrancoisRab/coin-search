@@ -12,7 +12,5 @@ class PagesController < ApplicationController
           }
         end
   end
-  def google4d9e386ef35cdb35
-  end
 end
 
