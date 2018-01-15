@@ -128,7 +128,7 @@
     <div class="container store-cards-color">
       <div class="row">
         <% @store_all.last(4).reverse.each do |store| %>
-          <div class="col-xs-12 col-md-3">
+          <div class="col-xs-12 col-sm-3 col-md-3">
             <%= link_to store_path(store) do %>
               <div class="last-store-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path store.photo,  height: 300, width: 400, crop: :fill %>);">
                 <div class="last-store-description">
