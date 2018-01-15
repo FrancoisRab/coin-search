@@ -5,7 +5,7 @@ puts "Creating stores..."
 
 stores_attributes = [
   {
-    user_id: 2,
+    user_id: User.first.id,
     open: true,
     category: "Antiquaire",
     name: "Marie & Benoit",
@@ -18,7 +18,7 @@ stores_attributes = [
     contact: "06 62 30 14 92",
   },
   {
-    user_id: 2,
+    user_id: User.first.id,
     open: true,
     category: "Coworking",
     name: "La Maison du Bitcoin",
@@ -31,7 +31,7 @@ stores_attributes = [
     contact: "06 62 30 14 92",
   },
   {
-    user_id: 2,
+    user_id: User.first.id,
     open: true,
     category: "Bar",
     name: "Sof's Bar",
