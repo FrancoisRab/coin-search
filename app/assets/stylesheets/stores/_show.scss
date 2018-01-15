@@ -20,7 +20,11 @@
 
 .header-title h1 {
   font-size: 25px;
-  padding-left: 10px;
+  padding-left: 20px;
+  @media (min-width: 300px) and (max-width: 700px) {
+    padding-left: 20px;
+    font-size: 18px;
+  }
 }
 
 .header-content {

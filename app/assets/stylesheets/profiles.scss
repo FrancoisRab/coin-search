@@ -3,12 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .wrapper-profil {
-  padding-bottom: 300px;
+}
+.list-inline {
+  padding-left: 15px;
+  margin-left: 0px;
 }
 
 .btn-section {
   display: flex;
   padding: 30px 10px 30px 10px;
+  @media (min-width: 300px) and (max-width: 700px) {
+    padding: 18px 0px 18px 10px;
+  }
 }
 
 .btn-add {
@@ -41,4 +47,24 @@
 .btn-override-profil:hover {
   background-color: #46CE90;
   color: white;
+}
+
+.profil-store-content-edit {
+  margin-bottom: 30px;
+  @media (min-width: 300px) and (max-width: 700px) {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 75px;
+  }
+  .fa {
+    @media (min-width: 300px) and (max-width: 700px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.profil-store-content-title {
+  @media (min-width: 300px) and (max-width: 700px) {
+    text-align: center;
+  }
 }
