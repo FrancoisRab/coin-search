@@ -8,17 +8,19 @@
 
 .list-btn {
   font-weight: 300;
-  padding-left: 215px;
   font-size: 16px;
   margin-bottom: 0px;
   flex-wrap: wrap;
   width: 900px;
   display: flex;
+  @media (min-width: 700px) and (max-width: 970px) {
+    width: 765px;
+  }
   @media (min-width: 300px) and (max-width: 700px) {
     font-weight: 300;
     padding: 20px;
     font-size: 16px;
-    width: 200px;
+    width: 300px;
   }
 
 }
@@ -32,6 +34,17 @@
   padding-top: 7px;
   background-color: #FFBB00;
   box-shadow: 2px 1px 13px -4px #f8ba3f;
+  @media (min-width: 700px) and (max-width: 970px) {
+
+  }
+  @media (min-width: 300px) and (max-width: 700px) {
+    width: 125px;
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+  }
   a {
     color: white;
   }
@@ -44,6 +57,17 @@
   padding: 7px 31px 0px 27px;
   background-color: #FFBB00;
   box-shadow: 2px 1px 13px -4px #f8ba3f;
+  @media (min-width: 700px) and (max-width: 970px) {
+
+  }
+  @media (min-width: 300px) and (max-width: 700px) {
+    width: 125px;
+    text-align: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+  }
   a {
     color: white;
   }
@@ -51,4 +75,8 @@
 
 .btn-list:last-child {
   border-top-right-radius: 6px;
+  @media (min-width: 300px) and (max-width: 700px) {
+    border-top-right-radius: unset;
+    border-bottom-right-radius: 6px;
+  }
 }

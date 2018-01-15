@@ -1,50 +1,52 @@
 <div class="page-search">
-  <div class="navbar-search text-center">
-    <ul class="list-btn" id="list-inline-override">
-      <li id="btn-bars">
-        <p class="list-hover">
-          <%= link_to 'Bars', "/search?utf8=%E2%9C%93&categorie=bar" %>
-        </p>
-      </li>
-      <li class="btn-list">
-        <p class="list-hover">
-          <%= link_to 'Restaurants', '/search?utf8=%E2%9C%93&categorie=restaurant' %>
-        </p>
-      </li>
-      <li class="btn-list">
-        <p class="list-hover">
-          <%= link_to 'Hotels', '/search?utf8=%E2%9C%93&categorie=hotel' %>
-        </p>
-      </li>
-      <li class="btn-list">
-        <p class="list-hover">
-          <%= link_to 'Coworking', '/search?utf8=%E2%9C%93&categorie=coworking' %>
-        </p>
-      </li>
-      <li class="btn-list">
-        <p class="list-hover">
-          <%= link_to 'Soins', '/search?utf8=%E2%9C%93&categorie=soins' %>
-        </p>
-      </li>
-      <li class="btn-list">
-        <p class="list-hover">
-          <%= link_to 'Autres', '/search?utf8=%E2%9C%93&categorie=autres' %>
-        </p>
-      </li>
-    </ul>
-  </div>
-  <div class="header-search">
-    <div class="search-bar">
-      <div class="search-icon">
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </div>
-      <div class="search-input">
-        <%= form_tag(search_index_path, method: "get") do %>
-          <%= text_field_tag :query, nil, placeholder: 'Adresse, bar, restaurant…', class: "input-search", id: "store_address" %>
-      </div>
-      <div class="search-btn">
-          <%= submit_tag "Chercher", class: "btn-search" %>
-        <% end %>
+  <div class="top-search-container">
+    <div class="navbar-search text-center">
+      <ul class="list-btn" id="list-inline-override">
+        <li id="btn-bars">
+          <p class="list-hover">
+            <%= link_to 'Bars', "/search?utf8=%E2%9C%93&categorie=bar" %>
+          </p>
+        </li>
+        <li class="btn-list">
+          <p class="list-hover">
+            <%= link_to 'Restaurants', '/search?utf8=%E2%9C%93&categorie=restaurant' %>
+          </p>
+        </li>
+        <li class="btn-list">
+          <p class="list-hover">
+            <%= link_to 'Hotels', '/search?utf8=%E2%9C%93&categorie=hotel' %>
+          </p>
+        </li>
+        <li class="btn-list">
+          <p class="list-hover">
+            <%= link_to 'Coworking', '/search?utf8=%E2%9C%93&categorie=coworking' %>
+          </p>
+        </li>
+        <li class="btn-list">
+          <p class="list-hover">
+            <%= link_to 'Soins', '/search?utf8=%E2%9C%93&categorie=soins' %>
+          </p>
+        </li>
+        <li class="btn-list">
+          <p class="list-hover">
+            <%= link_to 'Autres', '/search?utf8=%E2%9C%93&categorie=autres' %>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="header-search">
+      <div class="search-bar">
+        <div class="search-icon">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div class="search-input">
+          <%= form_tag(search_index_path, method: "get") do %>
+            <%= text_field_tag :query, nil, placeholder: 'Adresse, bar, restaurant…', class: "input-search", id: "store_address" %>
+        </div>
+        <div class="search-btn">
+            <%= submit_tag "Chercher", class: "btn-search" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

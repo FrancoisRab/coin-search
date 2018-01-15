@@ -113,10 +113,14 @@ h1, h2, h3, h4, h5 {
   justify-content: space-around;
   background-color: white;
   border-radius: 3px;
+  @media (min-width: 701px) and (max-width: 970px) {
+    justify-content: unset;
+  }
   @media (min-width: 300px) and (max-width: 700px) {
     background-color: unset;
     border-radius: unset;
     width: 54%;
+    justify-content: unset;
   }
 }
 
@@ -136,6 +140,9 @@ h1, h2, h3, h4, h5 {
   width: 730px;
   height: 45px;
   border: none;
+  @media (min-width: 701px) and (max-width: 970px) {
+    width: 537px;
+  }
   @media (min-width: 300px) and (max-width: 700px) {
     width: 142px;
     padding: 10px;
