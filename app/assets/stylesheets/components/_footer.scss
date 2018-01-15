@@ -1,7 +1,6 @@
 .footer-content {
   background-color: #fabb2d;
   display: flex;
-  justify-content: center;
   width: 100%;
   margin-top: 30px;
   padding: 15px 0px;
@@ -27,6 +26,8 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    padding-left: 0px;
+    justify-content: center;
   }
 }
 
@@ -60,8 +61,17 @@
 
 
 .made-by {
-  position: relative;
+  position: absolute;
   width: 160px;
+  bottom: 10px;
+  right: 10px;
+  @media (min-width: 300px) and (max-width: 700px) {
+    position: relative;
+    bottom: unset;
+    right: unset;
+    text-align: center;
+    padding-top: 10px;
+  }
   i {
     color: red;
   }
