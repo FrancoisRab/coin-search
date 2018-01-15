@@ -12,7 +12,6 @@ html {
 body {
   position: relative;
   margin: 0;
-  padding-bottom: 6rem;
   min-height: 100%;
 }
 
@@ -29,23 +28,45 @@ h1, h2, h3, h4, h5 {
 }*/
 
 .wrapper-home {
-  padding-bottom: 200px;
+  h2 {
+    @media (min-width: 300px) and (max-width: 700px) {
+      font-size: 23px;
+    }
+  }
 }
 
 /* CARDS*/
 
 .cards-space {
   padding: 10px;
+  @media (min-width: 300px) and (max-width: 700px) {
+    padding: unset;
+  }
 }
 
 .wrapper-cards {
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  @media (min-width: 300px) and (max-width: 700px) {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
   a {
     color: #F8BA3F;
   }
   a:hover {
     color: #41D3BD;
+  }
+
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .col-xs-12 {
+    @media (min-width: 300px) and (max-width: 700px) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -160,6 +181,12 @@ h1, h2, h3, h4, h5 {
 }
 
 /* LAST STORES */
+.wrapper-last-stores {
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
 
 .card-description {
   display: flex;
@@ -193,6 +220,13 @@ h1, h2, h3, h4, h5 {
   position: absolute;
 }
 
+.store-cards-color {
+  .col-xs-12 {
+    @media (min-width: 300px) and (max-width: 700px) {
+      margin-bottom: 20px;
+    }
+  }
+}
 
 
 
