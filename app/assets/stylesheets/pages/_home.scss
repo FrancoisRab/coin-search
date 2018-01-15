@@ -115,6 +115,7 @@ h1, h2, h3, h4, h5 {
   border-radius: 3px;
   @media (min-width: 701px) and (max-width: 970px) {
     justify-content: unset;
+    margin-left: 12px;
   }
   @media (min-width: 300px) and (max-width: 700px) {
     background-color: unset;
