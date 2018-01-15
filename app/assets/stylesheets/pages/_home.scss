@@ -124,6 +124,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   box-shadow: 2px 1px 13px -4px #f8ba3f;
   padding: 2px;
+  background-color: white;
   @media (min-width: 300px) and (max-width: 700px) {
     width: 147px;
     background-color: navajowhite;

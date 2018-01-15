@@ -8,19 +8,47 @@
 
 .list-btn {
   font-weight: 300;
-  padding: 20px;
+  padding-left: 215px;
   font-size: 16px;
+  margin-bottom: 0px;
+  flex-wrap: wrap;
+  width: 900px;
+  display: flex;
+  @media (min-width: 300px) and (max-width: 700px) {
+    font-weight: 300;
+    padding: 20px;
+    font-size: 16px;
+    width: 200px;
+  }
+
 }
 
 #btn-bars {
-  border-left: 1px solid;
-  border-right: 1px solid;
+  border: 1px solid white;
+  border-bottom: none;
+  border-top-left-radius: 6px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 7px;
+  background-color: #FFBB00;
+  box-shadow: 2px 1px 13px -4px #f8ba3f;
+  a {
+    color: white;
+  }
 }
 
 .btn-list {
-  border-right: 1px solid;
+  border-right: 1px solid white;
+  border-bottom: none;
+  border-top: 1px solid white;
   padding: 7px 31px 0px 27px;
+  background-color: #FFBB00;
+  box-shadow: 2px 1px 13px -4px #f8ba3f;
+  a {
+    color: white;
+  }
+}
+
+.btn-list:last-child {
+  border-top-right-radius: 6px;
 }
