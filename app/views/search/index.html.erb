@@ -41,7 +41,7 @@
         </div>
         <div class="search-input">
           <%= form_tag(search_index_path, method: "get") do %>
-            <%= text_field_tag :query, nil, placeholder: 'Adresse, bar, restaurant…', class: "input-search", id: "store_address" %>
+            <%= text_field_tag :query, nil, placeholder: 'ex: 34 rue du Caire, Paris', class: "input-search", id: "store_address" %>
         </div>
         <div class="search-btn">
             <%= submit_tag "Chercher", class: "btn-search" %>

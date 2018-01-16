@@ -3,10 +3,12 @@ class Store < ApplicationRecord
 
   validates :name, uniqueness: true, presence: true
   validates :category, presence: true
-  validates :postcode, presence: true
+  validates :postcode
   validates :address, uniqueness: true, presence: true
   validates :crypto, presence: true
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   include PgSearch
   pg_search_scope :search, against: [:name,
@@ -20,7 +22,4 @@ class Store < ApplicationRecord
       }
 
   mount_uploader :photo, PhotoUploader
-
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
 end
