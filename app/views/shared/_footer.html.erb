@@ -19,16 +19,10 @@
     </ul>
   </div>
   <div class="footer-right">
-    <p>
-      <%= link_to 'API', api_v1_stores_path, target: "_blank" %>
-    </p>
-  </div>
-  <div class="made-by">
-    <div class="made-by-content">
-      <p>
-        Fait avec <i class="fa fa-heart-o" aria-hidden="true"></i>
-        par <em><%= link_to 'François', 'https://www.linkedin.com/in/francoisrabanel/', target: '_blank' %></em>
-      </p>
-    </div>
+    <ul>
+      <li><strong>INFOS</strong></li>
+      <li><%= link_to 'Api', api_v1_stores_path, target: "_blank" %></li>
+      <li><%= link_to 'Contact', root_path %></li>
+    </ul>
   </div>
 </div>

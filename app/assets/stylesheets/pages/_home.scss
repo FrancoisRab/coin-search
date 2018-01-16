@@ -217,8 +217,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .last-store-description-name {
-  padding: 55px;
+  padding: 26px 10px 10px 26px;
   color: #F8BA3F;
+  overflow: scroll;
+  height: 140px;
 }
 
 .last-store-description-name:hover {
