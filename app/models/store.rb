@@ -3,7 +3,7 @@ class Store < ApplicationRecord
 
   validates :name, uniqueness: true, presence: true
   validates :category, presence: true
-  validates :postcode
+  validates :postcode, presence: true
   validates :address, uniqueness: true, presence: true
   validates :crypto, presence: true
 
