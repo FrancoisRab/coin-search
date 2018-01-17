@@ -16,5 +16,8 @@ class PagesController < ApplicationController
       }
     end
   end
+
+  def contact
+  end
 end
 
