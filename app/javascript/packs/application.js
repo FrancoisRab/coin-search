@@ -7,5 +7,6 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Application.js se charge toujours aussi bien !')
+console.log("Si la console te plait, n'hésite pas à visiter mon GitHub @FrancoisRab !")
+console.log("Je cherche un poste de dev rails junior :)")
 import "bootstrap";
