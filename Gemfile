@@ -7,6 +7,7 @@ end
  #SEO
  gem 'friendly_id', '~> 5.1.0'
  gem 'sitemap_generator'
+ gem 'google-api-client', '~> 0.11'
 
 #ActiveAdmin
 gem 'activeadmin'
