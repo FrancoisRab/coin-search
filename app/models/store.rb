@@ -6,6 +6,8 @@ class Store < ApplicationRecord
   validates :postcode, presence: true
   validates :address, uniqueness: true, presence: true
   validates :crypto, presence: true
+  validates :slug, presence: true, uniqueness: true
+
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
@@ -22,4 +24,7 @@ class Store < ApplicationRecord
       }
 
   mount_uploader :photo, PhotoUploader
+
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 end
