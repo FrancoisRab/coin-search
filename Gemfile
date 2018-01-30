@@ -4,13 +4,13 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+ #SEO
+ gem 'friendly_id', '~> 5.1.0'
 
 #ActiveAdmin
 gem 'activeadmin'
-
 #Geocoding
 gem "geocoder"
-
 #Gestion upload photo
 #carrierwave
 gem 'carrierwave', '~> 1.2'
@@ -20,7 +20,6 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'rails', '~> 5.1.4'
 #Cloudinary
 gem 'cloudinary'
-
 #Search
 gem 'pg_search'
 #pundit
@@ -67,14 +66,20 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'pry-rails', group: [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  #Test unitaires RSpec
+  gem 'rspec-rails', '~> 3.7'
+  #Automatise les tests RSpec
+  gem 'guard-rspec', require: false
+  #Fixtures avancées
+  gem "factory_bot_rails"
 end
 
 group :development do

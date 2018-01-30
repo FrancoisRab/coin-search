@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
   skip_before_action :authenticate_user!
-  before_action :set_store, only: [:show, :edit, :update, :destroy]
+  before_action :set_store, only: [:edit, :update, :destroy]
 
   def index
     @stores = policy_scope(Store).order(created_at: :desc)
@@ -20,6 +20,8 @@ class StoresController < ApplicationController
   end
 
   def show
+    @store = Store.friendly.find(params[:id])
+    authorize @store
     @store_user = @store.user_id
     @user = User.find(@store_user)
   end
@@ -34,7 +36,7 @@ class StoresController < ApplicationController
     @store = Store.new(store_params)
     authorize @store
     @store.user = current_user
-
+    raise
     if @store.save
       redirect_to store_path(@store)
     else
@@ -73,6 +75,7 @@ class StoresController < ApplicationController
                                   :crypto,
                                   :contact,
                                   :website,
+                                  :slug,
                                   :photo)
   end
 
