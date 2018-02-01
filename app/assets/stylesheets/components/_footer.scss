@@ -81,7 +81,17 @@
   }
 }
 
-
-.made-by-content {
-
+.footer-partnerships {
+  @media (min-width: 300px) and (max-width: 700px) {
+    text-align: center;
+    img {
+      width: 200px;
+    }
+  }
+  li {
+    display: inline;
+  }
+  img {
+    width: 100px;
+  }
 }
