@@ -1,5 +1,9 @@
+require 'json'
+require 'open-uri'
+
 class SearchController < ApplicationController
   skip_before_action :authenticate_user!
+  before_action :set_cryptos
 
   def index
   # recherche en fonction de ma position
@@ -32,5 +36,13 @@ class SearchController < ApplicationController
         }
       end
  end
+
+  private
+
+  def set_cryptos
+    url = 'https://api.coinmarketcap.com/v1/ticker/?limit=2'
+    url_cryptos = open(url).read
+    @cryptos = JSON.parse(url_cryptos)
+  end
 end
 

@@ -1,6 +1,10 @@
+require 'json'
+require 'open-uri'
+
 class StoresController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :set_store, only: [:edit, :update, :destroy]
+  before_action :set_cryptos
 
   def index
     @stores = policy_scope(Store).order(created_at: :desc)
@@ -36,7 +40,6 @@ class StoresController < ApplicationController
     @store = Store.new(store_params)
     authorize @store
     @store.user = current_user
-    raise
     if @store.save
       redirect_to store_path(@store)
     else
@@ -60,8 +63,14 @@ class StoresController < ApplicationController
 
   private
 
+  def set_cryptos
+    url = 'https://api.coinmarketcap.com/v1/ticker/?limit=2'
+    url_cryptos = open(url).read
+    @cryptos = JSON.parse(url_cryptos)
+  end
+
   def set_store
-    @store = Store.find(params[:id])
+    @store = Store.friendly.find(params[:id])
     authorize @store
   end
 

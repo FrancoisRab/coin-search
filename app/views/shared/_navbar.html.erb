@@ -3,7 +3,46 @@
   <a href="/" class="navbar-wagon-brand">
     <%= image_tag 'logo.png' %>
   </a>
-
+  <div class="cryptos">
+    <ul>
+      <% @cryptos.each do |crypto| %>
+        <div class="crypto">
+          <li>
+            <ul class=list-crypto>
+              <li>
+                <strong><%= crypto['name'] %></strong>
+              </li>
+              <% if (crypto['percent_change_1h'].to_i < 0) %>
+                <li>
+                  <i class="fas flash fa-long-arrow-alt-down"></i>
+                </li>
+                <li>
+                  <%= crypto['percent_change_1h'] %>%
+                </li>
+                <li>
+                  <strong>
+                    <%= ((crypto['price_usd'].to_i)*0.801102317).round(2) %>€
+                  </strong>
+                </li>
+              <% else %>
+              <li>
+                <i class="fas flash fa-long-arrow-alt-up"></i>
+              </li>
+              <li>
+                <%= crypto['percent_change_1h'] %>%
+              </li>
+              <li>
+                <strong>
+                  <%= ((crypto['price_usd'].to_i)*0.801102317).round(2) %>€
+                </strong>
+              </li>
+              <% end %>
+            </ul>
+          </li>
+        </div>
+      <% end %>
+    </ul>
+  </div>
   <% if user_signed_in? %>
   <!-- Navbar right -->
     <div class="connection">
@@ -17,7 +56,7 @@
         <%= link_to 'Mon profil', profiles_path %>
       </p>
       <p>
-        <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete, class: "dropdown-itstrong" %>
       </p>
     </div>
 </div>

@@ -1,7 +1,12 @@
+require 'json'
+require 'open-uri'
+
+
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_cryptos
   include Pundit
 
   # Pundit: white-list approach.
@@ -31,5 +36,11 @@ class ApplicationController < ActionController::Base
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+  end
+
+  def set_cryptos
+    url = 'https://api.coinmarketcap.com/v1/ticker/?limit=2'
+    url_cryptos = open(url).read
+    @cryptos = JSON.parse(url_cryptos)
   end
 end

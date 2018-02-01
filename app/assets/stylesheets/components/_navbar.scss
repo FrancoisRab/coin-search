@@ -7,8 +7,7 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  @media (min-width: 300px) and (max-width: 700px) {
+  @media (min-width: 300px) and (max-width: 880px) {
     flex-wrap: wrap;
     height: unset;
     padding: 0px;
@@ -16,7 +15,7 @@
   a {
     color: white;
     font-size: 15px;
-    @media (min-width: 300px) and (max-width: 700px) {
+    @media (min-width: 300px) and (max-width: 880px) {
       margin-top: 15px;
     }
   }
@@ -25,8 +24,53 @@
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
-  @media (min-width: 300px) and (max-width: 700px) {
+  @media (min-width: 300px) and (max-width: 880px) {
     margin-left: 10px;
+  }
+}
+
+/* CRYPTOS */
+
+.cryptos {
+  padding-top: 17px;
+  li {
+    display: inline;
+    text-decoration: none;
+  }
+  .fa-long-arrow-alt-down {
+    color: red;
+  }
+  .fa-long-arrow-alt-up {
+    color: green;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
   }
 }
 
@@ -36,7 +80,7 @@
   align-items: center;
   position: absolute;
   right: 24px;
-  @media (min-width: 300px) and (max-width: 700px) {
+  @media (min-width: 300px) and (max-width: 880px) {
     right: unset;
     position: unset;
     padding-left: 2px;
@@ -44,7 +88,7 @@
   }
   a {
     padding-left: 10px;
-    @media (min-width: 300px) and (max-width: 700px) {
+    @media (min-width: 300px) and (max-width: 880px) {
       font-size: 14px;
       padding-right: 7px;
     }

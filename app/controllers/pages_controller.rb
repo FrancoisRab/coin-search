@@ -1,3 +1,6 @@
+require 'json'
+require 'open-uri'
+
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
 
@@ -15,6 +18,9 @@ class PagesController < ApplicationController
         }
       }
     end
+    url = 'https://api.coinmarketcap.com/v1/ticker/?limit=2'
+    url_cryptos = open(url).read
+    @cryptos = JSON.parse(url_cryptos)
   end
 
   def contact
