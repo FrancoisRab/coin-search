@@ -27,7 +27,7 @@ gem 'pg_search'
 #pundit
 gem "pundit"
 #devise
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise' #, ref: '88e9a85'
 
 #Front
 gem 'jquery-rails'
@@ -97,4 +97,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Ruby version
-ruby '2.3.5'
+ruby '2.5.0'
